@@ -1,7 +1,11 @@
-class PfSense < Oxidized::Model
+class PfSenseRouter < Oxidized::Model
   using Refinements
 
   # use other use than 'admin' user, 'admin' user cannot get ssh/exec. See issue #535
+
+  cmd :all do |cfg|
+    cfg.cut_head
+  end
 
   cmd :secret do |cfg|
     cfg.gsub! /(\s+<bcrypt-hash>).+?(<\/bcrypt-hash>)/, '\\1[secret hidden]\\2'
@@ -15,7 +19,6 @@ class PfSense < Oxidized::Model
 
     cfg.gsub! /\s<revision>\s*<time>\d*<\/time>\s*.*\s*.*\s*<\/revision>/, ''
     cfg.gsub! /\s<last_rule_upd_time>\d*<\/last_rule_upd_time>/, ''
-    cfg.gsub! /\s<created>\s*<time>\d*<\/time>\s*.*CDATA\[Auto\].*\s*.*\s*<\/created>/, ''
     cfg
   end
 

@@ -7,6 +7,8 @@
 [![Gem Version](https://badge.fury.io/rb/oxidized.svg)](http://badge.fury.io/rb/oxidized)
 [![Join the chat at https://gitter.im/oxidized/Lobby](https://badges.gitter.im/oxidized/Lobby.svg)](https://gitter.im/oxidized/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+** This is a version modified to fix PFSense config backups and provide additional support to backup Ubiquiti Unifi Switches. **
+
 Oxidized is a network device configuration backup tool. It's a RANCID replacement!
 
 It is light and extensible and supports over 130 operating system types.
