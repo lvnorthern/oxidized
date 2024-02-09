@@ -1,4 +1,4 @@
-class UnifiSwitch < Oxidized::Model
+class Unifi < Oxidized::Model
   using Refinements
 
   prompt /@.*?:~\$\s/
